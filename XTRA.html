@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link rel="stylesheet" href="XTRAstyle.css">
+    <script defer src="XTRAjs.js"></script>
+</head>
+
+<body>
+    <h1>To-Do Lista</h1>
+
+    <form id="todo-form">
+        <label for="activity">Aktivitet:</label>
+        <input type="text" id="activity" required>
+
+        <label for="priority">Prioritet:</label>
+        <select id="priority">
+            <option value="Viktigt">Viktigt</option>
+            <option value="Normal" selected>Normal</option>
+            <option value="Oviktigt">Oviktigt</option>
+        </select>
+
+        <label for="date">Datum det ska lämnas in:</label>
+        <input type="date" id="date" required>
+
+        <button type="submit">Lägg till</button>
+    </form>
+
+    <ul id="todo-list"></ul>
+
+</body>
+
+</html>
