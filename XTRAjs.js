@@ -1,6 +1,14 @@
 // Kolla om det finns några aktiviteter sparade i local storage
 const storedTodos = localStorage.getItem('todos');
 const todos = storedTodos ? JSON.parse(storedTodos) : [];
+const toggleButton = document.getElementById("toggleButton");
+  let isWhiteBackground = true;
+
+  toggleButton.addEventListener("click", () => {
+    isWhiteBackground = !isWhiteBackground;
+    document.body.style.backgroundColor = isWhiteBackground ? "white" : "black";
+    toggleButton.innerText = isWhiteBackground ? "Switch to Black" : "Switch to White";
+  });
 
 // Funktion för att spara aktiviteter i local storage
 const saveTodos = () => {
@@ -52,6 +60,8 @@ form.addEventListener('submit', (event) => {
   priorityInput.selectedIndex = 1;
   dateInput.value = '';
 });
+
+
 
 // Initial render
 renderTodos();
